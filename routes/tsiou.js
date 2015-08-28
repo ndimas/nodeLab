@@ -6,6 +6,10 @@ var express = require("express"),
     router  = express.Router(),
     tweets  = [];
 
+router.get("/", function (req, res) {
+    res.render("tsiou",{tweets:tweets});
+});
+
 router.get("/tweets", function (req, res) {
     res.send(tweets);
 });
